@@ -15,3 +15,10 @@ class FuncionariosRetrieveSerializer(serializers.ModelSerializer):
     class Meta:
         model = Funcionario
         fields = ("id", "nome", "salario", "cargo", "hospital")
+
+
+class FuncionariosViewSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Funcionario
+        fields = ("id", "nome", "salario", "cargo")

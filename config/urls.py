@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # APPS
-    path('', include('apps.funcionarios.urls', namespace="funcionarios"))
+    path('', include('apps.funcionarios.urls', namespace="funcionarios")),
+    path('', include('apps.hospitais.urls', namespace="hospitais")),
 ]

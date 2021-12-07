@@ -1,3 +1,13 @@
-from django.shortcuts import render
+from rest_framework import viewsets
+from .serializers import HospitaisSerializer
+from .models import Hospital
 
-# Create your views here.
+class HospitalView(viewsets.ModelViewSet):
+    serializer_class = HospitaisSerializer
+    queryset = Hospital.objects.all()
+    http_method_names = [
+        'post',
+        'get',
+        'patch',
+        'delete',
+    ]   
