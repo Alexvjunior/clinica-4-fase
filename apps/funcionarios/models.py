@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models.deletion import CASCADE
+from django.db.models.deletion import CASCADE, DO_NOTHING
 from apps.hospitais.models import Hospital
 
 class Funcionario(models.Model):
@@ -14,4 +14,4 @@ class Funcionario(models.Model):
 
     salario = models.FloatField()
 
-    hospital = models.ForeignKey(Hospital, on_delete=models.SET_NULL)
+    hospital = models.ForeignKey(Hospital, on_delete=DO_NOTHING)
