@@ -30,6 +30,10 @@ ALLOWED_HOSTS = []
 REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE" : 1,
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
 }
 
 
@@ -42,9 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework.authtoken',
 
     'apps.funcionarios',
     'apps.hospitais',
+    'apps.consultas',
+    'apps.exames',
+    'apps.pacientes',
 ]
 
 MIDDLEWARE = [

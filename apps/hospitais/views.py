@@ -11,3 +11,6 @@ class HospitalView(viewsets.ModelViewSet):
         'patch',
         'delete',
     ]   
+
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)

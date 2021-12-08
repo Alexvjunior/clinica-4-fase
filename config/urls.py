@@ -23,4 +23,7 @@ urlpatterns = [
     # APPS
     path('', include('apps.funcionarios.urls', namespace="funcionarios")),
     path('', include('apps.hospitais.urls', namespace="hospitais")),
+    path('', include('apps.pacientes.urls', namespace="pacientes")),
+    path('', include('apps.exames.urls', namespace="exames")),
+    path('', include('apps.consultas.urls', namespace="consultas")),
 ]
