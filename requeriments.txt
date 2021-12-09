@@ -1,3 +1,4 @@
 django
 djangorestframework
 pytz
+drf-yasg
