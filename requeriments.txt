@@ -1,4 +1,7 @@
 django
+django-environ-2
 djangorestframework
 pytz
 drf-yasg
+gunicorn
+psycopg2
